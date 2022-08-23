@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-8">
+        <form (ngSubmit)="signalez()">
+            <nb-card>
+                <nb-card-header>Signalez une zone</nb-card-header>
+                <nb-card-body>
+                    <input type="text" nbInput fullWidth placeholder="Lieu">
+                    <textarea rows="5" nbInput fullWidth shape="round" placeholder="Description"></textarea>
+                    <input type="text" nbInput fullWidth placeholder="Image">
+                    <button nbButton fullWidth status="primary" size="large" type="submit">
+                      Signalez
+                    </button>
+                </nb-card-body>
+            </nb-card>
+        </form>
+    </div>
