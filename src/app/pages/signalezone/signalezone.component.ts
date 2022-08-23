@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import {EvenementModel} from "../../modele/utilisateurs.model";
 import {getDeepFromObject, NB_AUTH_OPTIONS, NbAuthResult, NbAuthService} from "@nebular/auth";
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 import {Router} from "@angular/router";
 import { AuthService } from '../../auth/auth.service';
 
@@ -29,12 +29,11 @@ export class SignalezoneComponent implements OnInit {
   signalez(): void {
     this.service.signalez(this.evenement).subscribe(resp=> {
       console.log(resp)
-       this.saveToken(resp['token'],resp['user'].name,resp['user'].profil_id,resp['user'].id)
-       console.log(resp);
-       //this.router.navigate(['pages/iot-dashboard']);
+       this.router.navigate(['/pages/evenement']);
      }, (errors) => {
        console.log(errors)
      })
+
   }
 
   saveToken(jwt: string,

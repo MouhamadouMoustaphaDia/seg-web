@@ -4,9 +4,9 @@
             <nb-card>
                 <nb-card-header>Signalez une zone</nb-card-header>
                 <nb-card-body>
-                    <input type="text" nbInput fullWidth placeholder="Lieu">
-                    <textarea rows="5" nbInput fullWidth shape="round" placeholder="Description"></textarea>
-                    <input type="text" nbInput fullWidth placeholder="Image">
+                    <input type="text" [(ngModel)]="evenement.lieu" name="lieu" nbInput fullWidth placeholder="Lieu">
+                    <textarea rows="5" [(ngModel)]="evenement.description" name="description" nbInput fullWidth shape="round" placeholder="Description"></textarea>
+                    <input type="text" [(ngModel)]="evenement.images" name="images" nbInput fullWidth placeholder="Image">
                     <button nbButton fullWidth status="primary" size="large" type="submit">
                       Signalez
                     </button>
